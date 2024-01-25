@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/acceuil.css" />
+    <link
+      href="https://fonts.cdnfonts.com/css/playfair-display"
+      rel="stylesheet"
+    />
+    <title>Hangman-web</title>
+  </head>
+  <div class="game">
+    <h1>Hangman-web</h1>
+    <div class="container flex">
+      <div id="top-paragraph-hang-pres">
+        <p class="intro-parapgraph">
+          Bienvenue sur mon jeu de pendu ! Tu peux choisir entre trois
+          difficultés :
+        </p>
+        <p class="difficulty-explain">
+          Easy = mot court et relativement commun<br />
+          Medium = mot de taille moyenne du language commun<br />
+          Hard = mot plutot long et relativement peu utilisé
+        </p>
+        <a class="hypertext" href="rules.html"
+          >Clique ici si tu as besoin de lire les règles</a
+        >
+      </div>
+      <div id="img-hangman-pres">
+        <img src="../img/Hangman_example.svg.png" alt="img-hangman" />
+      </div>
+      <div id="choose-difficulty">
+        <button class="Easy" onclick="window.location.href = 'easy.html';">
+          Easy
+        </button>
+        <button class="Medium" onclick="window.location.href = 'medium.html';">
+          Medium
+        </button>
+        <button class="Hard" onclick="window.location.href = 'hard.html';">
+          Hard
+        </button>
+      </div>
+    </div>
+  </div>
+  <body></body>
+</html>

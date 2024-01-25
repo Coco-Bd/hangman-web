@@ -1,0 +1,186 @@
+body {
+  background-image: url("../img/blackbackground-acceuil.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+}
+
+a {
+  color: #73cf84;
+  font-family: sans-serif;
+  font-size: 1.5vw;
+}
+
+h1 {
+  position: relative;
+  display: flex;
+  color: #eee;
+  justify-content: center;
+  font-weight: bold;
+  font-family: "Playfair Display", sans-serif;
+  font-size: 5vw;
+  margin: clamp(10px, 1vw, 20px);
+  margin-bottom: 1vw;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.game {
+  height: calc(100vh - 5vh);
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  padding: 3px 5px;
+  flex: 1;
+  margin: auto;
+  /*transform: translate(-50%, -50%);*/
+  background: transparent;
+  backdrop-filter: blur(150px);
+  height: 75%;
+  width: 50%;
+  border: 1px solid #ffffff;
+  box-shadow: 0 1px 1px rgba(255, 255, 255, 0.11),
+    0 2px 2px rgba(255, 255, 255, 0.11), 0 4px 4px rgba(255, 255, 255, 0.11),
+    0 8px 8px rgba(255, 255, 255, 0.11), 0 16px 16px rgba(255, 255, 255, 0.11),
+    0 32px 32px rgba(255, 255, 255, 0.11);
+  border-radius: 35px;
+}
+
+#top-paragraph-hang-pres {
+  margin: 0px;
+  font: inherit;
+  text-align: center;
+  height: 30%;
+}
+
+.intro-parapgraph {
+  color: #eee;
+  font-family: monospace;
+  font-size: 2vw;
+  margin: 1vw;
+}
+
+.difficulty-explain {
+  font-family: sans-serif;
+  color: #a4a4a4;
+  font-size: 1.5vw;
+  letter-spacing: 1px;
+}
+
+.hypertext {
+  position: relative;
+  margin: 3vw;
+}
+
+#img-hangman-pres {
+  margin-top: 5px;
+  aspect-ratio: 1;
+  margin: auto;
+  display: block;
+  display: flex;
+  justify-content: center;
+  height: 40%;
+}
+
+#img-hangman-pres img {
+  width: 100%;
+}
+
+button {
+  margin: auto;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
+#choose-difficulty {
+  flex-wrap: wrap;
+  /*margin-top: 4px;*/
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  /*height: 20%;*/
+  align-items: center;
+  justify-content: center;
+}
+
+#choose-difficulty .Easy {
+  background-image: linear-gradient(
+    to right,
+    #04aa6d 0%,
+    #73cf84 51%,
+    #04aa6d 100%
+  );
+  margin: 1.5vw;
+  padding: 15px 20px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 12px #eee;
+  border-radius: 10px;
+  display: block;
+  width: fit-content;
+  border-color: #ccc;
+}
+
+#choose-difficulty .Medium {
+  background-image: linear-gradient(
+    to right,
+    #ffba0c 0%,
+    #ffde58 51%,
+    #ffba0c 100%
+  );
+  margin: 1.5vw;
+  padding: 15px 20px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 12px #eee;
+  border-radius: 10px;
+  display: block;
+  width: fit-content;
+  border-color: #ccc;
+}
+
+#choose-difficulty .Hard {
+  background-image: linear-gradient(
+    to right,
+    #993232 0%,
+    #9b4f4f 51%,
+    #993232 100%
+  );
+  margin: 1.5vw;
+  padding: 15px 20px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 12px #eee;
+  border-radius: 10px;
+  display: block;
+  width: fit-content;
+  border-color: #ccc;
+}
+
+button:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+
+button:active {
+  transform: translateY(4px);
+}
