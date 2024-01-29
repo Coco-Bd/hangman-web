@@ -1,21 +1,27 @@
 package main
 
 import (
-	"fmt"
 	"html/template"
 	"net/http"
 )
 
 func Home(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Hello, world!")
-	RenderTemplate(w, "Home")
+	RenderTemplate(w, "acceuil")
 }
-func Game(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Hello, game!")
-	RenderTemplate(w, "Game")
+func Easy(w http.ResponseWriter, r *http.Request) {
+	RenderTemplate(w, "easy")
+}
+func Medium(w http.ResponseWriter, r *http.Request) {
+	RenderTemplate(w, "medium")
+}
+func Hard(w http.ResponseWriter, r *http.Request) {
+	RenderTemplate(w, "hard")
+}
+func Rules(w http.ResponseWriter, r *http.Request) {
+	RenderTemplate(w, "rules")
 }
 func RenderTemplate(w http.ResponseWriter, html string) {
-	t, err := template.ParseFiles("./Tempates/" + html + ".html")
+	t, err := template.ParseFiles("./html/" + html + ".html")
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
