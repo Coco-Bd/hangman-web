@@ -1,3 +1,62 @@
+@media screen and (min-width: 900px) {
+  /*#img-hangman-pres {
+    margin-top: 5px;
+    aspect-ratio: 1;
+    margin: auto;
+    display: block;
+    display: flex;
+    justify-content: center;
+    height: 40%;
+    width: 100%;
+  }*/
+
+  #choose-difficulty {
+    flex-wrap: wrap;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  /*#img-hangman-pres {
+    padding-top: 20px;
+    aspect-ratio: 1;
+    margin: auto;
+    margin-bottom: 50px;
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    height: 20%;
+    width: 20%;
+  }*/
+
+  #choose-difficulty {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+a {
+  color: #73cf84;
+  font-family: sans-serif;
+  font-size: clamp(1rem, 0.3043rem + 0.3vw, 3rem);
+}
+
+button {
+  margin: auto;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
 body {
   background-image: url("../img/blackbackground-acceuil.png");
   background-repeat: no-repeat;
@@ -5,12 +64,6 @@ body {
   background-size: cover;
   background-position: center;
   margin: 0;
-}
-
-a {
-  color: #73cf84;
-  font-family: sans-serif;
-  font-size: 1.5vw;
 }
 
 h1 {
@@ -23,12 +76,6 @@ h1 {
   font-size: 5vw;
   margin: clamp(10px, 1vw, 20px);
   margin-bottom: 1vw;
-}
-
-.flex {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .game {
@@ -62,15 +109,15 @@ h1 {
 
 .intro-parapgraph {
   color: #eee;
-  font-family: monospace;
-  font-size: 2vw;
+  font-family: "Lato";
+  font-size: clamp(1rem, 0.3043rem + 2.3vw, 3rem);
   margin: 1vw;
 }
 
 .difficulty-explain {
   font-family: sans-serif;
   color: #a4a4a4;
-  font-size: 1.5vw;
+  font-size: clamp(1rem, 0.3043rem + 0.3vw, 3rem);
   letter-spacing: 1px;
 }
 
@@ -79,57 +126,34 @@ h1 {
   margin: 3vw;
 }
 
-#img-hangman-pres {
-  margin-top: 5px;
-  aspect-ratio: 1;
-  margin: auto;
-  display: block;
-  display: flex;
-  justify-content: center;
-  height: 40%;
-}
-
-#img-hangman-pres img {
-  width: 100%;
-}
-
-button {
-  margin: auto;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-}
-
 #choose-difficulty {
-  flex-wrap: wrap;
-  /*margin-top: 4px;*/
-  margin-bottom: 10px;
-  display: flex;
-  justify-content: center;
-  /*height: 20%;*/
-  align-items: center;
-  justify-content: center;
+  padding-block: 20px;
 }
 
 #choose-difficulty .Easy {
   background-image: linear-gradient(
     to right,
     #04aa6d 0%,
-    #73cf84 51%,
+    #59bc6b 51%,
     #04aa6d 100%
   );
-  margin: 1.5vw;
-  padding: 15px 20px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
   background-size: 200% auto;
-  color: white;
-  box-shadow: 0 0 12px #eee;
-  border-radius: 10px;
-  display: block;
-  width: fit-content;
-  border-color: #ccc;
+  transition: 0.5s;
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  border-radius: 500px;
+  border: 1px solid transparent;
+  letter-spacing: 2px;
+  min-width: 160px;
+  text-transform: uppercase;
+  white-space: normal;
+  font-weight: 700;
+  text-align: center;
+  padding: 16px 14px 18px;
+  height: 48px;
 }
 
 #choose-difficulty .Medium {
@@ -139,18 +163,24 @@ button {
     #ffde58 51%,
     #ffba0c 100%
   );
-  margin: 1.5vw;
-  padding: 15px 20px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
+  margin-block: 15px;
   background-size: 200% auto;
-  color: white;
-  box-shadow: 0 0 12px #eee;
-  border-radius: 10px;
-  display: block;
-  width: fit-content;
-  border-color: #ccc;
+  transition: 0.5s;
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  border-radius: 500px;
+  border: 1px solid transparent;
+  letter-spacing: 2px;
+  min-width: 160px;
+  text-transform: uppercase;
+  white-space: normal;
+  font-weight: 700;
+  text-align: center;
+  padding: 16px 14px 18px;
+  height: 48px;
 }
 
 #choose-difficulty .Hard {
@@ -160,26 +190,64 @@ button {
     #9b4f4f 51%,
     #993232 100%
   );
-  margin: 1.5vw;
-  padding: 15px 20px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
   background-size: 200% auto;
-  color: white;
-  box-shadow: 0 0 12px #eee;
-  border-radius: 10px;
-  display: block;
-  width: fit-content;
-  border-color: #ccc;
+  transition: 0.5s;
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  border-radius: 500px;
+  border: 1px solid transparent;
+  letter-spacing: 2px;
+  min-width: 160px;
+  text-transform: uppercase;
+  white-space: normal;
+  font-weight: 700;
+  text-align: center;
+  padding: 16px 14px 18px;
+  height: 48px;
 }
 
 button:hover {
   background-position: right center;
   color: #fff;
   text-decoration: none;
+  box-shadow: 0 0 12px #eee;
+}
+
+button:focus {
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 0 12px #eee;
 }
 
 button:active {
   transform: translateY(4px);
+}
+
+.field {
+  margin-block: 20px;
+  display: flex;
+  justify-content: center;
+  padding-block: 20px;
+}
+
+#username {
+  outline: none;
+  border-radius: 8px;
+  height: 2rem;
+  width: 15rem;
+  background: transparent;
+  border: 2px;
+  border-color: white;
+  box-shadow: white 0px 0px 4px 1px;
+}
+
+#username::placeholder {
+  text-align: center;
+}
+
+#username:focus::placeholder {
+  transform: translateY(-40px);
 }

@@ -8,15 +8,19 @@
       href="https://fonts.cdnfonts.com/css/playfair-display"
       rel="stylesheet"
     />
-    <title>Hangman-web</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato"
+      rel="stylesheet"
+    />
+    <title>Jeu du pendu</title>
   </head>
   <div class="game">
-    <h1>Hangman-web</h1>
+    <h1>Jeu du pendu</h1>
     <div class="container flex">
       <div id="top-paragraph-hang-pres">
         <p class="intro-parapgraph">
-          Bienvenue sur mon jeu de pendu ! Tu peux choisir entre trois
-          difficultés :
+          Bienvenue sur mon jeu de pendu !<br />
+          peux choisir entre trois difficultés :
         </p>
         <p class="difficulty-explain">
           Easy = mot court et relativement commun<br />
@@ -27,19 +31,18 @@
           >Clique ici si tu as besoin de lire les règles</a
         >
       </div>
-      <div id="img-hangman-pres">
+      <!--
+        <div id="img-hangman-pres">
         <img src="../img/Hangman_example.svg.png" alt="img-hangman" />
       </div>
+      -->
       <div id="choose-difficulty">
-        <button class="Easy" onclick="window.location.href = 'easy.html';">
-          Easy
-        </button>
-        <button class="Medium" onclick="window.location.href = 'medium.html';">
-          Medium
-        </button>
-        <button class="Hard" onclick="window.location.href = 'hard.html';">
-          Hard
-        </button>
+        <button class="Easy">Easy</button>
+        <button class="Medium">Medium</button>
+        <button class="Hard">Hard</button>
+      </div>
+      <div class="field">
+        <input type="text" id="username" placeholder="Username" />
       </div>
     </div>
   </div>
